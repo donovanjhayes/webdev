@@ -1,3 +1,4 @@
+/*Sample: https://github.com/horatio-mulholland/odin-sign-up-form/blob/main/style.css*/
 :root{
     --color: #5e545a;
     --txt: rgb(185, 185, 185)
@@ -31,7 +32,7 @@ body {
 /* left side */
 
 #left {
-    flex: 0.6;
+    flex: 0.7;
     background-image: url(./photos/sailingform.jpg);
     background-size: cover;
     background-position: center;
@@ -59,26 +60,27 @@ h1{
 
 /* right side */
 
-#right{
-    width: 60vw;
-    background-color: #000000;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    
 
-}
 
 #left{
     padding-left: 3vw;
 }
 
 
+#right{
+    width: 45vw;
+    background-color: #000000;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 3vw;
+    padding-right: 5vw;
+}
 
 
 /* form */
 
-#right{
+/*#right{
     background-color: rgb(6, 6, 6);
     box-shadow: 0 10px 20px -2px rgb(22, 22, 22);
     display: flex;
@@ -86,7 +88,7 @@ h1{
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-}
+}*/
 
 #logo {
     display: flex;
