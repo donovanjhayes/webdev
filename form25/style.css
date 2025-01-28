@@ -1,23 +1,42 @@
 /*Sample: https://github.com/horatio-mulholland/odin-sign-up-form/blob/main/style.css*/
 :root{
     --color: #5e545a;
-    --txt: rgb(185, 185, 185)
+    --txt: rgb(10, 10, 10)
 }
 
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Norse-Bold', sans-serif;
     color: var(--txt);
 
     /* outline: 1px solid red; */
 }
 
-.content {
+@font-face {
+    font-family: NorseBold;
+    src: url(./photos/Norse-Bold.otf);
+}
+
+#logo h1 {
+    font-family: NorseBold;
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+}
+
+/*.content {
     width: 100vw;
     height: 100vh;
+}*/
+
+#title{
+    display:flex;
+    color:blue;
 }
+
+
 
 body {
     width: min(1440px, 100vw);
@@ -29,16 +48,16 @@ body {
     font-family: sans-serif;
 }
 
-/* left side */
-
 #left {
-    flex: 0.7;
+    flex: 0.6;
+/*    padding-left: 3vw;*/
     background-image: url(./photos/sailingform.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 3vw;
 }
 
 
@@ -48,33 +67,37 @@ body {
     position: relative;
     top: 20vh;
     gap: 1vw;
-    padding: 15px 0;
-
+    padding: 0.5rem;
     justify-content: center;
     align-items: center;
+/*    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    margin-top: 9rem;*/
 }
 
-h1{
+#logo img {
+    height: 50rem;
+}
+
+#logo h1 {
+    font-family: NorseBold;
+    font-size: 4rem;
     color: white;
+    margin: 0;
 }
 
 /* right side */
 
 
 
-#left{
-    padding-left: 3vw;
-}
-
 
 #right{
-    width: 45vw;
-    background-color: #000000;
+    flex: 1;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    padding-left: 3vw;
-    padding-right: 5vw;
+    flex-direction: column;
 }
 
 
@@ -97,6 +120,7 @@ h1{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.5rem;
     margin-top: 9rem;
+    margin-right: 4rem;
 }
 
 #logo img {
@@ -104,7 +128,7 @@ h1{
 }
 
 input{
-    background-color: rgb(2, 2, 2);
+    background-color: rgb(237, 247, 247);
     border: 1px solid rgb(77, 77, 77);
     border-radius: 3px;
 }
@@ -114,18 +138,7 @@ input:focus{
     border: 2px solid var(--color);
 }
 
-button{
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--color);
-    font-weight: 700;
-    font-size: 1.2em;
-    border: 2px solid var(--color);
-    border-radius: 5px;
-    padding: 10px 40px;
-    margin: 40px 0;
-}
-
-button:hover{
+#lowbutton button:hover{
     background-color: var(--color);
     color: black;
     
@@ -141,15 +154,88 @@ a:hover{
     color: white;
 }
 
+#middle {
+    flex: 1;
+    background-color: white;
+    box-shadow: 0px 3px 8px -4px grey;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+#middle #title {
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
+}
+
+#middle p :not(#title) {
+    display: flex;
+    flex-direction: column;
+}
+
+#middle label {
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
+
+#middle input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+#middle input:focus {
+    border: 1px solid blue;
+    box-shadow: 3px 3px 8px -4px grey;
+}
+
+#middle input:invalid {
+    border: 1px solid red;
+}
+
+/*button{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 40px 0;
+}*/
 
 #lowbutton button {
     background-color: #596D48;
-    padding: 10px 30px;
-    border: none;
+/*    border: none;*/
     border-radius: 5px;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.2em;
     box-shadow: 3px 3px 8px -4px grey;
+    padding: 10px 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    margin: 40px;
+}
+
+#lowbutton p {
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+#left p{
+    margin-bottom: 40px;
+    font-size:0.8em;
+    margin-left: 40px;
+}
+
+#lower {
+    flex: 1;
+    padding: 2rem;
 }
 
 #upper {
@@ -159,14 +245,4 @@ a:hover{
     flex-direction: column;
     justify-content: flex-end;
     padding: 2rem;
-}
-
-#middle {
-    flex: 1;
-    background-color: white;
-    box-shadow: 0px 3px 8px -4px grey;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 3rem;
 }
